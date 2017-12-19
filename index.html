@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mini JS</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/angular.min.js" type="text/javascript"></script>
+  <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./js/app.js" type="text/javascript"></script>
+  <script src="./js/services.js"></script>
+  <!-- <script src="./js/rellax.js"></script> -->
+  <!-- <script src="./js/jquery-ui.min.js"></script> -->
+  <!-- <script src="./js/scroll.js"></script> -->
+
+</head>
+
+<body ng-controller="home">
+
+<div class="home-title-container">
+<img class="home-logo" src="img/logo-white.png">
+<div class="home-title-big">Live healthy. Live efficient.</div>
+<div class="home-title-sm">Designed for a better life.</div>
+</div>
+<div class="col-md-2 "><div class="tab dairytag " ng-class="{active : activetag == 0}" ng-click="cata(0)">dairy </div></div>
+     <div class="col-md-2 "><div class="tab seafoodtag" ng-class="{active : activetag == 1}"  ng-click="cata(1)">seafood </div></div>
+          <div class="col-md-2 "><div class="tab vegetabletag " ng-class="{active : activetag == 2}"   ng-click="cata(2)">vegetable </div></div>
+               <div class="col-md-2 "><div class="tab cerealstag "  ng-class="{active : activetag == 3}" ng-click="cata(3)"> cereals</div></div>
+                    <div class="col-md-2 "><div class="tab fruittag " ng-class="{active : activetag == 4}"  ng-click="cata(4)"> fruit</div></div>                 
+                      <div class="col-md-2 "><div class="tab meattag " ng-class="{active : activetag == 5}"   ng-click="cata(5)">meat
+
+  </div></div>
+
+
+</div>
+<div class=" body-container row">
+<div class="col-md-2 "   ng-repeat="food in foods" ><div class="card"><img class="card-img" alt="" src="{{food.src}}">
+<div class="card-text"  >{{food.name}}<div>
+</div></div>
+
+</div></div></div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
